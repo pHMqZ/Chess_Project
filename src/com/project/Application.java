@@ -8,7 +8,7 @@ import com.project.chess.ChessMatch;
 import com.project.chess.ChessPiece;
 import com.project.chess.ChessPosition;
 
-public class ChessApplication {
+public class Application {
 
 	public static void main(String[] args) {
 
@@ -18,9 +18,8 @@ public class ChessApplication {
 		while (true) {
 			try {
 				UI.clearScreen();
-				UI.printBoard(chessMatch.getPieces());
+				UI.printMatch(chessMatch);
 				System.out.println();
-
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
 				

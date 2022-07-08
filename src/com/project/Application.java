@@ -51,5 +51,4 @@ public class Application {
 		UI.clearScreen();
 		UI.printMatch(chessMatch, captured);
 	}
-
 }

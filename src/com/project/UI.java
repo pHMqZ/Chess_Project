@@ -63,6 +63,14 @@ public class UI {
 			System.out.println("Winner: " + chessMatch.getCurrentPlayer());
 		}
 	}
+	
+	public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
+		printBoard(chessMatch.getPieces());
+		System.out.println();
+		printCapturedPieces(captured);
+		System.out.println("Turn : "  + chessMatch.getTurn());
+		System.out.println("Waiting player: " + chessMatch.getCurrentPalyer());		
+	}
 
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i = 0; i < pieces.length; i++) {

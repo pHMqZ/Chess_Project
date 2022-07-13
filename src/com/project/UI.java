@@ -44,6 +44,26 @@ public class UI {
 			return new ChessPosition(column, row);
 		} catch (RuntimeException e) {
 			throw new InputMismatchException("Error reading ChessPosition. Valid values are from a1 to h8.");
+<<<<<<< HEAD
+		}
+	}
+
+	public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
+		printBoard(chessMatch.getPieces());
+		System.out.println();
+		printCapturedPieces(captured);
+		System.out.println();
+		System.out.println("Turn : " + chessMatch.getTurn());
+		if (!chessMatch.getCheckMate()) {
+			System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+			if (chessMatch.getCheck()) {
+				System.out.println("CHECK!");
+			}
+		} else {
+			System.out.println("CHECKMATE!");
+			System.out.println("Winner: " + chessMatch.getCurrentPlayer());
+=======
+>>>>>>> f54925d11d238000d7c379ede74c3ab79c42ff48
 		}
 	}
 
@@ -62,6 +82,14 @@ public class UI {
 			System.out.println("CHECKMATE!");
 			System.out.println("Winner: " + chessMatch.getCurrentPlayer());
 		}
+	}
+	
+	public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
+		printBoard(chessMatch.getPieces());
+		System.out.println();
+		printCapturedPieces(captured);
+		System.out.println("Turn : "  + chessMatch.getTurn());
+		System.out.println("Waiting player: " + chessMatch.getCurrentPalyer());		
 	}
 
 	public static void printBoard(ChessPiece[][] pieces) {
